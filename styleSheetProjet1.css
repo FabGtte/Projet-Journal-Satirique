@@ -24,11 +24,13 @@
     border-radius: 3px;
 }
 
+.overflow-ellipsis{
+    text-overflow: ellipsis; 
+}
 /*******************************************************************
 **************************Aside css**********************************
 ********************************************************************/
-
-.asideDiv{
+.asideDiv {
     background: url("https://www.ladepeche.fr/img/textures/thin-color.png") #c6c6c6;
     content: '';
     bottom: 0;
@@ -36,7 +38,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    width: 8px; 
+    width: 8px;
 }
 ::before{
     box-sizing: inherit;
@@ -55,4 +57,106 @@
 
 .sortButton{
     margin-right: 1em;
+}
+
+
+/*----------------------------------------------------------------------------------------
+    -------------------------- Media Queries ---------------------------------------------
+    --------------------------------------------------------------------------------------
+*/
+.grid-container {
+
+}
+
+.img-case {
+
+}
+
+.title-case{
+
+}
+
+.p-case {
+
+}
+
+.button-case {
+
+}
+
+.image {
+
+}
+
+.displayBlock{
+
+}
+
+@media (max-width: 600px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1.8fr 2fr;
+        grid-template-rows: 0.6fr 1fr 0.3fr;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+
+    .img-case {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        object-fit: cover;
+    }
+
+    .title-case {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #61ef1f;
+        overflow: hidden;
+        min-width: 0;
+        padding-left: 5px;
+        justify-self: center;
+        margin: 0px;
+    }
+
+    .p-case {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: #148cc8; /*Le background color, sert d'indicateur pour voir l'étendue et le format des cases sur le grid*/
+        overflow: hidden;
+        min-width: 0;
+        padding-top: 5px;
+        margin 0px;
+    }
+
+    .button-case {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+
+    .image {
+        display: block;
+        vertical-align: top;
+        margin: 0px;
+    }
+
+    .displayBlock {
+        display: inline-block;
+        margin: 0;
+    }
 }

@@ -57,3 +57,19 @@
 .sortButton{
     margin-right: 1em;
 }
+
+.btn-outline-dark:hover {
+    color: #ffc300;
+    border-color: #212529;
+    
+}
+
+/*.btn-outline-dark {
+    color: #212529;
+    border-color: #ffc300; 
+}
+
+.a:hover {
+    color: #ffc300;*/
+}
+
